@@ -2,10 +2,11 @@ import time
 name = raw_input("What's your name?")
 print ("Hello " + name + "!!!!!")
 response = raw_input("Are you ready(Y/N)?")
+newResponse = response.lower()
 yes = set(['yes','y', 'ye', ''])
 no = set(['no','n'])
 
-if response == "y":
+if newResponse == "yes":
     print int(3)
     time.sleep(1)
     print int(2)
@@ -14,7 +15,7 @@ if response == "y":
     time.sleep(1)
     print "LETS GO!"
 
-if response == "n":
+if newResponse == "no":
     print "Have a nice day " + name + "!!"
     time.sleep(1)
     print "Bye!"
