@@ -5,10 +5,10 @@ import time
 
 
 HOME_TCP_IP = '10.0.1.3'
-SCHOOL_TCP_IP = '10.2.177.254'
+SCHOOL_TCP_IP = '10.2.177.222'
 PHONE_TCP_IP = '10.22.218.220'
 HOME_IP_PORT = 54254
-SCHOOL_IP_PORT = 52790
+SCHOOL_IP_PORT = 59086
 #IP_PORTQ = raw_input("What is your IP Port? ")
 #IP_Address = raw_input("What is your IP Address? ")
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
