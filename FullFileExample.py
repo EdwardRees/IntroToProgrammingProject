@@ -1,6 +1,5 @@
 import time
 import socket
-import Tkinter
 #name = raw_input("What's your name? ")
 #print ("Hello " + name + "!!!!! ")
 response = raw_input("Are you ready(Y/N)? ")
@@ -21,7 +20,7 @@ if newResponse == "yes" or newResponse == "y" or newResponse == "ye":
 
 
     TCP_IP = '10.2.176.172'
-    IP_PORT = 52323
+    IP_PORT = 52391
 
 
     Sec = 0
@@ -31,7 +30,7 @@ if newResponse == "yes" or newResponse == "y" or newResponse == "ye":
 
 
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    home = client_socket.connect((TCP_IP, IP_PORT))
+    IP = client_socket.connect((TCP_IP, IP_PORT))
 
 #school = client_socket.connect((SCHOOL_TCP_IP, SCHOOL_IP_PORT))
     while True:
@@ -49,19 +48,16 @@ if newResponse == "yes" or newResponse == "y" or newResponse == "ye":
 
         data = client_socket.recv(1000)
 
-        if ( data == 'q' or data == 'Q'):
+        if ():
             split = data.split(',')
             axisY = split[6]
-            client_socket.close()
-
-
+            client_socket.close()      
 
             break;
 
 
-
-
         else:
+            
             split = data.split(',')
             split6 = (round(float(split[6]),3))
             #print "RECIEVED:" ,
@@ -72,7 +68,7 @@ if newResponse == "yes" or newResponse == "y" or newResponse == "ye":
             print("Finished");
             #client_socket.close()
             time.sleep(0.75)
-            print ("Y`ou lasted for " + str(Sec) + " seconds long")
+            print ("Congratulations! You lasted for " + str(Sec) + " seconds long")
             break;
 
 
@@ -82,7 +78,7 @@ if newResponse == "yes" or newResponse == "y" or newResponse == "ye":
             print("Finished");
             #client_socket.close()
             time.sleep(0.75)
-            print ("You lasted for " + str(Sec) + " seconds long")
+            print ("Congratulations! You lasted for " + str(Sec) + " seconds long")
             break;
 
 
@@ -99,3 +95,5 @@ if newResponse == "no":
 
 quit
 
+#Key information, on the phone go to the settings and deselect all options except DM
+#Then change your recording rate to 1 s
