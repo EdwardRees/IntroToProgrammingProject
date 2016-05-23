@@ -15,6 +15,7 @@ while True:
   Sec += 1
   secClock = (str(Min) + " Mins " + str(Sec) + " Sec ")
   print secClock
+  
   if Sec == 60:
     Sec = 0
     Min += 1
