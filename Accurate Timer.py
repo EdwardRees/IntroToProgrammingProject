@@ -28,7 +28,6 @@ while True:
   os.system('cls' if os.name == 'nt' else 'clear')
   if sys.stdin in select.select([sys.stdin], [], [], 0)[0]:
     print ("finish")
-    print ("Congratulation, " + name + " you lasted for " + str(round(end-start, 3)) + " second long ")
-    #export student balance time result to a textfile
+    #export student time result to a textfile
     text_file.write ("Time:" + str(round(end-start, 3)) + "second(s)" + "\n" )
     break;
