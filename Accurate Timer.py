@@ -1,4 +1,7 @@
 import time
+import sys, select, os
+
+text_file=open("TextFile.txt", "a")
 
 Sec=0
 Min=0
@@ -21,3 +24,11 @@ while True:
     Min += 1
     clock = (str(Min) + " Minute")
     print(clock)
+  
+  os.system('cls' if os.name == 'nt' else 'clear')
+  if sys.stdin in select.select([sys.stdin], [], [], 0)[0]:
+    print ("finish")
+    print ("Congratulation, " + name + " you lasted for " + str(round(end-start, 3)) + " second long ")
+    #export student balance time result to a textfile
+    text_file.write ("Time:" + str(round(end-start, 3)) + "second(s)" + "\n" )
+    break;
