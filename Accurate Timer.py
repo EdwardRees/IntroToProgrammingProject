@@ -1,5 +1,5 @@
 import time
-import sys, select, os
+import sys, select
 
 text_file=open("TextFile.txt", "a")
 
@@ -25,7 +25,6 @@ while True:
     clock = (str(Min) + " Minute")
     print(clock)
   
-  os.system('cls' if os.name == 'nt' else 'clear')
   if sys.stdin in select.select([sys.stdin], [], [], 0)[0]:
     print ("finish")
     #export student time result to a textfile
